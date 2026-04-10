@@ -133,7 +133,7 @@ ol li
 
 #menubar
 { width: 898px;
-  height: auto;
+  height: 52px;
   overflow: hidden;
   padding: 0;
   background: #000;} 
@@ -151,9 +151,9 @@ ul#menu li a
   font: bold 110% arial, sans-serif;
   display: block; 
   float: left; 
-  height: 17px;
+  line-height: 52px;
   margin: 0;
-  padding: 18px 26px 17px 26px;
+  padding: 0 30px;
   text-align: center;
   color: #FFF;
   text-transform: uppercase;
