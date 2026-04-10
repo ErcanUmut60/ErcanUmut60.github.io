@@ -171,7 +171,8 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 
 .sidebar .profile-photo
 { width: 210px;
-  height: auto;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;}
 
