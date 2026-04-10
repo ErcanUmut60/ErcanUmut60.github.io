@@ -3,8 +3,7 @@ html
 
 *
 { margin: 0;
-  padding: 0;
-  box-sizing: border-box;}
+  padding: 0;}
 
 body
 { font: normal 1.05em 'trebuchet ms', arial, sans-serif;
@@ -81,12 +80,7 @@ ol
 ol li
 { margin: 0 0 11px 0;}
 
-#main
-{ width: 898px;
-  margin-left: auto; 
-  margin-right: auto;}
-
-#logo, #menubar, #site_content, #footer
+#main, #logo, #menubar, #site_content, #footer
 { margin-left: auto; 
   margin-right: auto;}
 
@@ -134,7 +128,6 @@ ol li
 #menubar
 { width: 898px;
   height: 52px;
-  overflow: hidden;
   padding: 0;
   background: #000;} 
 
@@ -148,12 +141,12 @@ ul#menu li
 
 ul#menu li a
 { letter-spacing: 0.1em;
-  font: bold 110% arial, sans-serif;
+  font: normal 110% arial, sans-serif;
   display: block; 
   float: left; 
-  line-height: 52px;
-  margin: 0;
-  padding: 0 30px;
+  height: 17px;
+  margin: 10px 0 0 10px;
+  padding: 9px 26px 6px 26px;
   text-align: center;
   color: #FFF;
   text-transform: uppercase;
@@ -165,7 +158,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   background: transparent url(transparent_light.png) repeat;}
 
 #site_content
-{ width: 898px;
+{ width: 854px;
   overflow: hidden;
   margin: 0 auto 0 auto;
   padding: 0 24px 20px 20px;
@@ -319,118 +312,3 @@ table tr td
 { background: #F0EFE2;
   color: #47433F;
   border-top: 1px solid #FFF;}
-
-/* ========== RESPONSIVE / MOBILE ========== */
-@media screen and (max-width: 920px) {
-  #main, #logo, #menubar, #site_content, #footer
-  { width: auto;
-    max-width: 100%;}
-
-  #header
-  { height: auto;}
-
-  #logo
-  { width: auto;
-    height: auto;
-    min-height: 120px;
-    padding: 10px;}
-
-  #logo #logo_text
-  { position: relative;
-    top: auto;
-    left: auto;}
-
-  #logo h1, #logo h2
-  { font-size: 200%;}
-
-  #logo_text h2
-  { font-size: 90%;}
-
-  #menubar
-  { width: auto;
-    height: auto;
-    overflow: hidden;}
-
-  ul#menu
-  { float: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;}
-
-  ul#menu li
-  { float: none;}
-
-  ul#menu li a
-  { float: none;
-    display: block;
-    margin: 5px 4px;
-    padding: 8px 16px;
-    height: auto;
-    font-size: 95%;}
-
-  #site_content
-  { width: auto;
-    padding: 10px 15px 20px 15px;}
-
-  .sidebar
-  { float: none;
-    width: auto;
-    padding: 0 0 20px 0;
-    text-align: center;}
-
-  .sidebar .profile-photo
-  { width: 180px;
-    max-height: 220px;
-    margin: 0 auto 15px auto;
-    display: block;}
-
-  .sidebar ul
-  { width: auto;
-    text-align: left;}
-
-  #content
-  { float: none;
-    width: auto;
-    padding: 0;}
-
-  #footer
-  { width: auto;
-    height: auto;
-    padding: 15px 10px;
-    font-size: 85%;}
-
-  .form_settings span
-  { float: none;
-    width: auto;
-    display: block;
-    padding-bottom: 4px;}
-
-  .form_settings input, .form_settings textarea
-  { width: 100%;
-    box-sizing: border-box;}
-
-  .form_settings .submit
-  { margin: 10px 0 0 0;}
-
-  .form_settings select
-  { width: 100%;}
-}
-
-@media screen and (max-width: 480px) {
-  #logo h1, #logo h2
-  { font-size: 160%;}
-
-  #logo_text h2
-  { font-size: 80%;}
-
-  ul#menu li a
-  { padding: 6px 10px;
-    font-size: 85%;}
-
-  h1, h2, h3
-  { font-size: 150%;}
-
-  .sidebar .profile-photo
-  { width: 150px;
-    max-height: 190px;}
-}
