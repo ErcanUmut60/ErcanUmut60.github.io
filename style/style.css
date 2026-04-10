@@ -3,7 +3,8 @@ html
 
 *
 { margin: 0;
-  padding: 0;}
+  padding: 0;
+  box-sizing: border-box;}
 
 body
 { font: normal 1.05em 'trebuchet ms', arial, sans-serif;
@@ -80,7 +81,12 @@ ol
 ol li
 { margin: 0 0 11px 0;}
 
-#main, #logo, #menubar, #site_content, #footer
+#main
+{ width: 898px;
+  margin-left: auto; 
+  margin-right: auto;}
+
+#logo, #menubar, #site_content, #footer
 { margin-left: auto; 
   margin-right: auto;}
 
@@ -158,7 +164,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   background: transparent url(transparent_light.png) repeat;}
 
 #site_content
-{ width: 854px;
+{ width: 898px;
   overflow: hidden;
   margin: 0 auto 0 auto;
   padding: 0 24px 20px 20px;
