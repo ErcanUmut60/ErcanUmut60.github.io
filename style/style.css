@@ -6,19 +6,20 @@ html
   padding: 0;}
 
 body
-{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+{ font: normal 1.05em 'trebuchet ms', arial, sans-serif;
   background: #F0EFE2 url(background.png) repeat;
   color: #000;}
 
 p
 { padding: 0 0 20px 0;
-  line-height: 1.7em;}
+  line-height: 1.8em;
+  font-size: 1.05em;}
 
 img
 { border: 0;}
 
 h1, h2, h3, h4, h5, h6 
-{ font: normal 175% 'century gothic', arial, sans-serif;
+{ font: normal 200% 'century gothic', arial, sans-serif;
   color: #000;
   margin: 0 0 15px 0;
   padding: 15px 0 5px 0;}
@@ -29,10 +30,10 @@ h2
 h4, h5, h6
 { margin: 0;
   padding: 0 0 5px 0;
-  font: normal 120% arial, sans-serif;}
+  font: normal 130% arial, sans-serif;}
 
 h5, h6
-{ font: italic 95% arial, sans-serif;
+{ font: italic 105% arial, sans-serif;
   padding: 0 0 15px 0;}
 
 a, a:hover
@@ -70,7 +71,8 @@ ul
 ul li
 { list-style-type: circle;
   margin: 0 0 6px 0; 
-  padding: 0 0 4px 5px;}
+  padding: 0 0 4px 5px;
+  font-size: 1.0em;}
 
 ol
 { margin: 8px 0 22px 20px;}
@@ -90,12 +92,18 @@ ol li
 { width: 898px;
   position: relative;
   height: 148px;
-  border-bottom: 2px solid #FFF;}
+  border-bottom: 2px solid #FFF;
+  /* [TODO] Replace banner.jpg with your own image */
+  background: url(banner.jpg) no-repeat center center;
+  background-size: cover;}
 
 #logo #logo_text 
 { position: absolute; 
   top: 20px;
-  left: 0;}
+  left: 0;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 10px 20px;
+  border-radius: 4px;}
 
 #logo h1, #logo h2
 { font: normal 300% 'century gothic', arial, sans-serif;
@@ -133,7 +141,7 @@ ul#menu li
 
 ul#menu li a
 { letter-spacing: 0.1em;
-  font: normal 100% arial, sans-serif;
+  font: normal 110% arial, sans-serif;
   display: block; 
   float: left; 
   height: 17px;
@@ -161,6 +169,12 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   width: 210px;
   padding: 0 15px 20px 15px;}
 
+.sidebar .profile-photo
+{ width: 210px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;}
+
 .sidebar ul
 { width: 198px; 
   padding: 4px 0 0 0; 
@@ -179,6 +193,13 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #7E2451;
   text-decoration: none;} 
 
+.sidebar h3
+{ font-size: 130%;}
+
+.sidebar p
+{ font-size: 0.95em;
+  line-height: 1.6em;}
+
 #content
 { text-align: left;
   float: left;
@@ -193,7 +214,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   background: url(bullet.png) no-repeat;
   margin: 0 0 6px 0; 
   padding: 0 0 4px 25px;
-  line-height: 1.5em;}
+  line-height: 1.6em;}
 
 #footer
 { width: 898px;
