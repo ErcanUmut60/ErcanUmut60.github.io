@@ -12,16 +12,25 @@
     
     .sidebar { 
       float: left; 
-      /* Adds a thin line with 20% opacity (black) */
-      border-right: 1px solid rgba(0, 0, 0, 0.2); 
+      /* Removed the border-right from here */
     }
     
     #content { 
       float: left;
-      /* Adds breathing room between the line and your text */
       padding-left: 25px; 
-      /* Reduced slightly from 595px to account for the padding and prevent layout breaking */
       width: 570px; 
+      position: relative; /* Required to position the line inside this area */
+    }
+
+    /* This creates the custom line */
+    #content::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 22px; /* Adjust this value to perfectly align with your 'Welcome' text */
+      bottom: 15px; /* Adjust this to stop the line a bit before the footer if desired */
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
