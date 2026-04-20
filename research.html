@@ -10,6 +10,58 @@
   <style>
     .sidebar { display: none; }
     #content { width: 100%; }
+
+    .cards-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 200px;
+      background: #FFF;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      overflow: hidden;
+      text-decoration: none;
+      color: #000;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+      transform: translateY(-3px);
+      text-decoration: none;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 15px 20px 20px 20px;
+      text-align: center;
+    }
+
+    .card-body h2 {
+      font: bold 120% 'century gothic', arial, sans-serif;
+      color: #4A2060;
+      margin: 0 0 10px 0;
+      padding: 10px 0 5px 0;
+      text-transform: uppercase;
+    }
+
+    .card-body p {
+      font-size: 0.95em;
+      line-height: 1.6em;
+      padding: 0;
+      color: #444;
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
@@ -35,9 +87,36 @@
     <div id="site_content">
       <div id="content">
         <h1>Research</h1>
-        <p><!-- [TODO] Write about your research here. --></p>
-        <h2>Experience</h2>
-        <p><!-- [TODO] Add your work or research experience here. --></p>
+        <div class="cards-container">
+
+          <a href="research/projects.html" class="card">
+            <!-- [TODO] Replace with your image -->
+            <img src="style/banner.jpg" alt="Projects" />
+            <div class="card-body">
+              <h2>Projects</h2>
+              <p><!-- [TODO] Short description --></p>
+            </div>
+          </a>
+
+          <a href="research/experience.html" class="card">
+            <!-- [TODO] Replace with your image -->
+            <img src="style/banner.jpg" alt="Experience" />
+            <div class="card-body">
+              <h2>Experience</h2>
+              <p><!-- [TODO] Short description --></p>
+            </div>
+          </a>
+
+          <a href="research/publications.html" class="card">
+            <!-- [TODO] Replace with your image -->
+            <img src="style/banner.jpg" alt="Publications" />
+            <div class="card-body">
+              <h2>Publications</h2>
+              <p><!-- [TODO] Short description --></p>
+            </div>
+          </a>
+
+        </div>
       </div>
     </div>
     <div id="footer">
