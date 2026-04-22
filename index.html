@@ -13,14 +13,18 @@
     
     .sidebar { 
       float: left; 
-      /* Removed the border-right from here */
+      width: 260px;
+    }
+
+    .sidebar .profile-photo {
+      width: 260px;
     }
     
     #content { 
       float: left;
       padding-left: 25px; 
-      width: 570px; 
-      position: relative; /* Required to position the line inside this area */
+      width: 520px; 
+      position: relative;
     }
 
     /* This creates the custom line */
@@ -28,8 +32,8 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 22px; /* Adjust this value to perfectly align with your 'Welcome' text */
-      bottom: 15px; /* Adjust this to stop the line a bit before the footer if desired */
+      top: 22px;
+      bottom: 15px;
       width: 1px;
       background-color: rgba(0, 0, 0, 0.2);
     }
@@ -55,6 +59,7 @@
       margin-top: 15px;
       padding-top: 12px;
       border-top: 1px solid #ddd;
+      text-align: justify;
     }
 
     .sidebar .address i {
