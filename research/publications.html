@@ -9,25 +9,38 @@
   <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <style>
-    /* Hide the default sidebar (we'll make our own on the right) */
+    /* Hide the default sidebar */
     .sidebar { display: none; }
 
-    /* Layout: content on the left, TOC sidebar on the right */
+    /* Site content wrapper */
+    #site_content {
+      overflow: hidden;
+      padding-top: 10px;
+    }
+
+    /* Main content area */
     #content {
       float: left;
-      width: 620px;
-      padding-right: 20px;
+      width: 570px;
+      padding: 0 30px 0 0;
+      margin: 0;
       text-align: justify;
     }
 
+    #content h1 {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    /* TOC sidebar on the right */
     .toc-sidebar {
       float: right;
-      width: 210px;
+      width: 200px;
       padding: 15px 18px;
       background: #f7f7f2;
       border: 1px solid #e2e0d3;
       border-radius: 6px;
-      margin-top: 25px;
+      margin: 15px 0 0 0;
       font-size: 0.95em;
       position: sticky;
       top: 15px;
@@ -65,7 +78,7 @@
       text-decoration: underline;
     }
 
-    /* Publication list */
+    /* Publication sections */
     .pub-section {
       padding-top: 20px;
       scroll-margin-top: 20px;
