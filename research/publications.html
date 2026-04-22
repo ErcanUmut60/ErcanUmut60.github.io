@@ -90,20 +90,58 @@
       margin-bottom: 15px;
     }
 
-    ol.pub-list {
-      margin: 0 0 25px 25px;
+    /* Year heading */
+    .pub-year {
+      font: normal 220% 'century gothic', arial, sans-serif;
+      color: #4A7AAB;
+      margin: 30px 0 10px 0;
       padding: 0;
     }
 
-    ol.pub-list li {
-      padding: 8px 0;
+    /* Publication list */
+    .pub-list {
+      list-style: none;
+      margin: 0 0 25px 0;
+      padding: 0;
+    }
+
+    .pub-list li {
+      list-style: none;
+      background: none;
+      padding: 14px 30px;
+      margin: 0;
+      border-bottom: 1px solid #e5e5e5;
       line-height: 1.6em;
       font-size: 0.95em;
     }
 
-    ol.pub-list li a {
-      color: #4A2060;
-      word-break: break-all;
+    .pub-list li:last-child {
+      border-bottom: none;
+    }
+
+    .pub-list li a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .pub-list li a:hover {
+      text-decoration: underline;
+    }
+
+    .pub-list .authors {
+      color: #222;
+    }
+
+    .pub-list .year {
+      color: #222;
+    }
+
+    .pub-list .title {
+      color: #333;
+    }
+
+    .pub-list .doi {
+      color: #333;
     }
   </style>
 </head>
@@ -141,29 +179,32 @@
 
         <section id="conferences" class="pub-section">
           <h2>Conferences</h2>
-          <ol class="pub-list">
+
+          <h3 class="pub-year">2026</h3>
+          <ul class="pub-list">
             <li>
-              E. U. Danışan and S. Eyi, "Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-2297, Jan. 2026, doi:
-              <a href="https://doi.org/10.2514/6.2026-2297">10.2514/6.2026-2297</a>.
+              <span class="authors">Danışan, Ercan U.; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization, AIAA SCITECH 2026 Forum, AIAA Paper 2026-2297</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-2297" class="doi">10.2514/6.2026-2297</a>
             </li>
             <li>
-              E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, "Investigation of ignition overpressure over a launch pad using open-source CFD solvers," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-0509, Jan. 2026, doi:
-              <a href="https://doi.org/10.2514/6.2026-0509">10.2514/6.2026-0509</a>.
+              <span class="authors">Danışan, Ercan U.; Duru, Murat O.; Ghorbani Iriolya, Tohid; Gundem, Dogukan; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Investigation of ignition overpressure over a launch pad using open-source CFD solvers, AIAA SCITECH 2026 Forum, AIAA Paper 2026-0509</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-0509" class="doi">10.2514/6.2026-0509</a>
             </li>
             <li>
-              D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, "Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-1340, Jan. 2026, doi:
-              <a href="https://doi.org/10.2514/6.2026-1340">10.2514/6.2026-1340</a>.
+              <span class="authors">Gundem, Dogukan; Ghorbani Iriolya, Tohid; Danışan, Ercan U.; Cetin, Esra B.; Atilkan, Yavuz; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers, AIAA SCITECH 2026 Forum, AIAA Paper 2026-1340</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-1340" class="doi">10.2514/6.2026-1340</a>
+            </li>
+          </ul>
+
+          <h3 class="pub-year">2025</h3>
+          <ul class="pub-list">
+            <li>
+              <span class="authors">Danışan, Ercan U.; Duru, Murat O.; Ghorbani Iriolya, Tohid; Gundem, Dogukan; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-131, Ankara, Türkiye</span>
             </li>
             <li>
-              E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, "Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-131, 2025.
+              <span class="authors">Gundem, Dogukan; Ghorbani Iriolya, Tohid; Danışan, Ercan U.; Cetin, Esra B.; Atilkan, Yavuz; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-135, Ankara, Türkiye</span>
             </li>
             <li>
-              D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, "Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-135, 2025.
+              <span class="authors">Danışan, Ercan U.; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-137, Ankara, Türkiye</span>
             </li>
-            <li>
-              E. U. Danışan and S. Eyi, "Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-137, 2025.
-            </li>
-          </ol>
+          </ul>
         </section>
 
         <section id="journals" class="pub-section">
