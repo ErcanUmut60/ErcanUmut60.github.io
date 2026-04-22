@@ -7,11 +7,92 @@
   <meta name="keywords" content="aerospace engineer, publications, Ercan Umut Danışan" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
-  <style>
-    .sidebar { display: none; }
-    #content { width: 100%; }
-  </style>
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <style>
+    /* Hide the default sidebar (we'll make our own on the right) */
+    .sidebar { display: none; }
+
+    /* Layout: content on the left, TOC sidebar on the right */
+    #content {
+      float: left;
+      width: 620px;
+      padding-right: 20px;
+      text-align: justify;
+    }
+
+    .toc-sidebar {
+      float: right;
+      width: 210px;
+      padding: 15px 18px;
+      background: #f7f7f2;
+      border: 1px solid #e2e0d3;
+      border-radius: 6px;
+      margin-top: 25px;
+      font-size: 0.95em;
+      position: sticky;
+      top: 15px;
+    }
+
+    .toc-sidebar h3 {
+      font: bold 100% 'century gothic', arial, sans-serif;
+      margin: 0 0 10px 0;
+      padding: 0 0 8px 0;
+      border-bottom: 1px solid #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc-sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-sidebar ul li {
+      list-style: none;
+      background: none;
+      padding: 6px 0;
+      margin: 0;
+    }
+
+    .toc-sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .toc-sidebar ul li a:hover {
+      color: #4A2060;
+      text-decoration: underline;
+    }
+
+    /* Publication list */
+    .pub-section {
+      padding-top: 20px;
+      scroll-margin-top: 20px;
+    }
+
+    .pub-section h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    ol.pub-list {
+      margin: 0 0 25px 25px;
+      padding: 0;
+    }
+
+    ol.pub-list li {
+      padding: 8px 0;
+      line-height: 1.6em;
+      font-size: 0.95em;
+    }
+
+    ol.pub-list li a {
+      color: #4A2060;
+      word-break: break-all;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,15 +109,55 @@
           <li><a href="../index.html">Home</a></li>
           <li class="selected"><a href="../research.html">Research</a></li>
           <li><a href="../interests.html">Interests</a></li>
-          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
     <div id="site_content">
+
+      <aside class="toc-sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#conferences">Conferences</a></li>
+          <li><a href="#journals">Journals</a></li>
+        </ul>
+      </aside>
+
       <div id="content">
         <p><a href="../research.html">&larr; Back to Research</a></p>
         <h1>Publications</h1>
-        <p><!-- [TODO] Write about your publications here. --></p>
+
+        <section id="conferences" class="pub-section">
+          <h2>Conferences</h2>
+          <ol class="pub-list">
+            <li>
+              E. U. Danışan and S. Eyi, "Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-2297, Jan. 2026, doi:
+              <a href="https://doi.org/10.2514/6.2026-2297">10.2514/6.2026-2297</a>.
+            </li>
+            <li>
+              E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, "Investigation of ignition overpressure over a launch pad using open-source CFD solvers," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-0509, Jan. 2026, doi:
+              <a href="https://doi.org/10.2514/6.2026-0509">10.2514/6.2026-0509</a>.
+            </li>
+            <li>
+              D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, "Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers," in <em>AIAA SCITECH 2026 Forum</em>, AIAA Paper 2026-1340, Jan. 2026, doi:
+              <a href="https://doi.org/10.2514/6.2026-1340">10.2514/6.2026-1340</a>.
+            </li>
+            <li>
+              E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, "Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-131, 2025.
+            </li>
+            <li>
+              D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, "Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-135, 2025.
+            </li>
+            <li>
+              E. U. Danışan and S. Eyi, "Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads," in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, Paper AIAC-2025-137, 2025.
+            </li>
+          </ol>
+        </section>
+
+        <section id="journals" class="pub-section">
+          <h2>Journals</h2>
+          <p><em>No journal publications yet.</em></p>
+        </section>
+
       </div>
     </div>
     <div id="footer">
