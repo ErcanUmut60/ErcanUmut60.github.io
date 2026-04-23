@@ -3,15 +3,172 @@
 
 <head>
   <title>Ercan Umut Danışan | Projects</title>
-  <meta name="description" content="Projects - Ercan Umut Danışan" />
-  <meta name="keywords" content="aerospace engineer, projects, Ercan Umut Danışan" />
+  <meta name="description" content="Research projects - Ercan Umut Danışan" />
+  <meta name="keywords" content="aerospace engineer, projects, CFD, Ercan Umut Danışan" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <style>
     .sidebar { display: none; }
-    #content { width: 100%; }
+
+    #site_content {
+      overflow: hidden;
+      padding-top: 10px;
+    }
+
+    #content {
+      float: left;
+      width: 570px;
+      padding: 0 30px 0 0;
+      margin: 0;
+      text-align: justify;
+    }
+
+    #content h1 {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    /* TOC sidebar */
+    .toc-sidebar {
+      float: right;
+      width: 200px;
+      padding: 15px 18px;
+      background: #f7f7f2;
+      border: 1px solid #e2e0d3;
+      border-radius: 6px;
+      margin: 15px 0 0 0;
+      font-size: 0.95em;
+      position: sticky;
+      top: 15px;
+    }
+
+    .toc-sidebar h3 {
+      font: bold 100% 'century gothic', arial, sans-serif;
+      margin: 0 0 10px 0;
+      padding: 0 0 8px 0;
+      border-bottom: 1px solid #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc-sidebar ul,
+    .toc-sidebar ul li {
+      list-style: none !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-sidebar ul li {
+      padding: 6px 0 !important;
+      background-image: none !important;
+    }
+
+    .toc-sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.92em;
+    }
+
+    .toc-sidebar ul li a:hover {
+      color: #4A2060;
+      text-decoration: underline;
+    }
+
+    /* Project blocks */
+    .project {
+      padding: 30px 0;
+      border-bottom: 1px solid #ddd;
+      scroll-margin-top: 20px;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+    }
+
+    .project-title {
+      font: normal 160% 'century gothic', arial, sans-serif;
+      color: #222;
+      margin: 0 0 4px 0;
+      padding: 0;
+    }
+
+    .project-meta {
+      font-size: 0.88em;
+      color: #777;
+      font-style: italic;
+      margin: 0 0 15px 0;
+    }
+
+    .project p {
+      font-size: 0.95em;
+      line-height: 1.7em;
+      margin: 0 0 12px 0;
+      padding: 0;
+      text-align: justify;
+    }
+
+    /* Figure styling */
+    .figure {
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    .figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .figure figcaption {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Two figures side-by-side */
+    .figure-row {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .figure-row .figure {
+      flex: 1;
+      margin: 0;
+    }
+
+    /* YouTube embed */
+    .video-embed {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin: 18px 0;
+      border-radius: 4px;
+      background: #000;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-caption {
+      font-size: 0.85em;
+      color: #666;
+      text-align: center;
+      margin-top: -8px;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
   </style>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 </head>
 
 <body>
@@ -32,10 +189,148 @@
       </div>
     </div>
     <div id="site_content">
+
+      <aside class="toc-sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#hypersonic">Hypersonic Research</a></li>
+          <li><a href="#adjoint">Unsteady Adjoint Optimization</a></li>
+          <li><a href="#3d-deflector">3D Deflector Investigation</a></li>
+          <li><a href="#2d-deflector">2D Deflector Investigation</a></li>
+          <li><a href="#course-projects">Course Projects</a></li>
+          <li><a href="#milano">Politecnico di Milano</a></li>
+        </ul>
+      </aside>
+
       <div id="content">
         <p><a href="../research.html">&larr; Back to Research</a></p>
         <h1>Projects</h1>
-        <p><!-- [TODO] Write about your projects here. --></p>
+        <p>A showcase of research projects I've worked on, from the most recent to the earliest.</p>
+
+        <!-- ========================= HYPERSONIC ========================= -->
+        <section id="hypersonic" class="project">
+          <h2 class="project-title">Hypersonic Research</h2>
+          <p class="project-meta">2026 &ndash; Present &middot; METU, under supervision of Prof. Dr. Sinan Eyi</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="Hypersonic flow field" />
+            <figcaption>Figure 1. Placeholder &mdash; replace with Mach contour or schlieren image.</figcaption>
+          </figure>
+
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Video 1. Placeholder &mdash; replace the YouTube embed URL with your simulation video.</p>
+        </section>
+
+        <!-- ========================= UNSTEADY ADJOINT ========================= -->
+        <section id="adjoint" class="project">
+          <h2 class="project-title">Unsteady Adjoint Optimization of a Flame Deflector</h2>
+          <p class="project-meta">M.Sc. Thesis &middot; 2024 &ndash; 2026 &middot; METU</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <div class="figure-row">
+            <figure class="figure">
+              <img src="../style/banner.jpg" alt="Baseline geometry" />
+              <figcaption>Baseline deflector.</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../style/banner.jpg" alt="Optimized geometry" />
+              <figcaption>Optimized deflector.</figcaption>
+            </figure>
+          </div>
+
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="Pressure history comparison" />
+            <figcaption>Figure 2. Pressure history showing IOP reduction after optimization.</figcaption>
+          </figure>
+        </section>
+
+        <!-- ========================= 3D DEFLECTOR ========================= -->
+        <section id="3d-deflector" class="project">
+          <h2 class="project-title">3D Flame Deflector Investigation</h2>
+          <p class="project-meta">TUBITAK 1001-ARDEB #123M355 &middot; 2025</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="3D pressure field" />
+            <figcaption>Figure 3. 3D pressure wave propagation at a launch pad.</figcaption>
+          </figure>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Video 2. 3D IOP simulation (placeholder).</p>
+
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+
+        <!-- ========================= 2D DEFLECTOR ========================= -->
+        <section id="2d-deflector" class="project">
+          <h2 class="project-title">2D Flame Deflector Investigation</h2>
+          <p class="project-meta">TUBITAK 1001-ARDEB #123M355 &middot; 2024</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <div class="figure-row">
+            <figure class="figure">
+              <img src="../style/banner.jpg" alt="2D mesh" />
+              <figcaption>Computational mesh.</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="../style/banner.jpg" alt="2D Mach contour" />
+              <figcaption>Mach number contour.</figcaption>
+            </figure>
+          </div>
+
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </section>
+
+        <!-- ========================= COURSE PROJECTS ========================= -->
+        <section id="course-projects" class="project">
+          <h2 class="project-title">Course Projects</h2>
+          <p class="project-meta">METU M.Sc. Coursework &middot; 2023 &ndash; 2024</p>
+
+          <h3>Heat Transfer on a Double Wedge in Hypervelocity Nitrogen Flows</h3>
+          <p class="project-meta">Advanced Heat and Mass Transfer &middot; 2024</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. SU2 and SU2-NEMO were used to model non-equilibrium heat transfer on a double-wedge geometry in hypervelocity nitrogen flow.</p>
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="Double wedge heat flux" />
+            <figcaption>Figure 4. Placeholder &mdash; wedge heat flux contour.</figcaption>
+          </figure>
+
+          <h3>Supersonic Compression Ramp Flows</h3>
+          <p class="project-meta">Turbulence Modeling for Engineering Flows &middot; 2023</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Flow over a supersonic compression ramp was studied using SU2, with meshes generated in SALOME and Gmsh.</p>
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="Compression ramp" />
+            <figcaption>Figure 5. Placeholder &mdash; compression ramp schlieren.</figcaption>
+          </figure>
+        </section>
+
+        <!-- ========================= MILANO ========================= -->
+        <section id="milano" class="project">
+          <h2 class="project-title">Re-entry Vehicle Aerodynamics</h2>
+          <p class="project-meta">Erasmus+ Research Internship &middot; Politecnico di Milano, Italy &middot; Sep 2022 &ndash; Jan 2023</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The research investigated aerodynamic characteristics of re-entry vehicles in hypersonic regimes using the SU2 CFD solver and its non-equilibrium extension SU2-NEMO.</p>
+
+          <figure class="figure">
+            <img src="../style/banner.jpg" alt="Re-entry capsule" />
+            <figcaption>Figure 6. Placeholder &mdash; re-entry capsule Mach contour.</figcaption>
+          </figure>
+
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
       </div>
     </div>
     <div id="footer">
