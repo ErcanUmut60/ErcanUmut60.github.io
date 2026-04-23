@@ -3,8 +3,9 @@
 (function () {
   var banners = [
     'nozzle.jpg',
-    'banner2.jpg',
-    'banner3.jpg'
+    'Merlin-1-X4.jpg',
+    'rocket.jpg',
+    'shuttle.jpg'
     // Add more filenames here as you add images to style/banners/
   ];
 
