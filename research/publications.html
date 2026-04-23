@@ -120,7 +120,7 @@
     }
 
     .pub-list li a {
-      color: #222;
+      color: #1a73e8;
       text-decoration: none;
     }
 
@@ -128,20 +128,21 @@
       text-decoration: underline;
     }
 
-    .pub-list .authors {
-      color: #222;
-    }
-
-    .pub-list .year {
-      color: #222;
-    }
-
+    .pub-list .authors,
+    .pub-list .year,
     .pub-list .title {
-      color: #333;
+      color: #222;
     }
 
-    .pub-list .doi {
-      color: #333;
+    /* Remove bullets/circles from the TOC ul too */
+    .toc-sidebar ul,
+    .toc-sidebar ul li {
+      list-style: none !important;
+    }
+
+    .toc-sidebar ul li {
+      background-image: none !important;
+      padding-left: 0 !important;
     }
   </style>
 </head>
@@ -168,8 +169,8 @@
       <aside class="toc-sidebar">
         <h3>On this page</h3>
         <ul>
-          <li><a href="#conferences">Conferences</a></li>
-          <li><a href="#journals">Journals</a></li>
+          <li><a href="#year-2026">2026</a></li>
+          <li><a href="#year-2025">2025</a></li>
         </ul>
       </aside>
 
@@ -177,35 +178,31 @@
         <p><a href="../research.html">&larr; Back to Research</a></p>
         <h1>Publications</h1>
 
-        <section id="conferences" class="pub-section">
-          <h2>Conferences</h2>
+        <h3 class="pub-year" id="year-2026">2026</h3>
+        <ul class="pub-list">
+          <li>
+            E. U. Danışan and S. Eyi, &ldquo;Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-2297">10.2514/6.2026-2297</a>.
+          </li>
+          <li>
+            E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Investigation of ignition overpressure over a launch pad using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-0509">10.2514/6.2026-0509</a>.
+          </li>
+          <li>
+            D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-1340">10.2514/6.2026-1340</a>.
+          </li>
+        </ul>
 
-          <h3 class="pub-year">2026</h3>
-          <ul class="pub-list">
-            <li>
-              <span class="authors">Danışan, Ercan U.; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization, AIAA SCITECH 2026 Forum, AIAA Paper 2026-2297</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-2297" class="doi">10.2514/6.2026-2297</a>
-            </li>
-            <li>
-              <span class="authors">Danışan, Ercan U.; Duru, Murat O.; Ghorbani Iriolya, Tohid; Gundem, Dogukan; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Investigation of ignition overpressure over a launch pad using open-source CFD solvers, AIAA SCITECH 2026 Forum, AIAA Paper 2026-0509</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-0509" class="doi">10.2514/6.2026-0509</a>
-            </li>
-            <li>
-              <span class="authors">Gundem, Dogukan; Ghorbani Iriolya, Tohid; Danışan, Ercan U.; Cetin, Esra B.; Atilkan, Yavuz; Eyi, Sinan</span> &nbsp; <span class="year">(2026)</span> &nbsp; <span class="title">Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers, AIAA SCITECH 2026 Forum, AIAA Paper 2026-1340</span> &nbsp; DOI <a href="https://doi.org/10.2514/6.2026-1340" class="doi">10.2514/6.2026-1340</a>
-            </li>
-          </ul>
-
-          <h3 class="pub-year">2025</h3>
-          <ul class="pub-list">
-            <li>
-              <span class="authors">Danışan, Ercan U.; Duru, Murat O.; Ghorbani Iriolya, Tohid; Gundem, Dogukan; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-131, Ankara, Türkiye</span>
-            </li>
-            <li>
-              <span class="authors">Gundem, Dogukan; Ghorbani Iriolya, Tohid; Danışan, Ercan U.; Cetin, Esra B.; Atilkan, Yavuz; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-135, Ankara, Türkiye</span>
-            </li>
-            <li>
-              <span class="authors">Danışan, Ercan U.; Eyi, Sinan</span> &nbsp; <span class="year">(2025)</span> &nbsp; <span class="title">Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads, 12th Ankara International Aerospace Conference (AIAC), Paper AIAC-2025-137, Ankara, Türkiye</span>
-            </li>
-          </ul>
-        </section>
+        <h3 class="pub-year" id="year-2025">2025</h3>
+        <ul class="pub-list">
+          <li>
+            E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+          </li>
+          <li>
+            D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+          </li>
+          <li>
+            E. U. Danışan and S. Eyi, &ldquo;Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+          </li>
+        </ul>
 
         <section id="journals" class="pub-section">
           <h2>Journals</h2>
