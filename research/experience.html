@@ -7,11 +7,141 @@
   <meta name="keywords" content="aerospace engineer, experience, Ercan Umut Danışan" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <style>
     .sidebar { display: none; }
-    #content { width: 100%; }
+
+    #site_content {
+      overflow: hidden;
+      padding-top: 10px;
+    }
+
+    #content {
+      float: left;
+      width: 570px;
+      padding: 0 30px 0 0;
+      margin: 0;
+      text-align: justify;
+    }
+
+    #content h1 {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    /* TOC sidebar */
+    .toc-sidebar {
+      float: right;
+      width: 200px;
+      padding: 15px 18px;
+      background: #f7f7f2;
+      border: 1px solid #e2e0d3;
+      border-radius: 6px;
+      margin: 15px 0 0 0;
+      font-size: 0.95em;
+      position: sticky;
+      top: 15px;
+    }
+
+    .toc-sidebar h3 {
+      font: bold 100% 'century gothic', arial, sans-serif;
+      margin: 0 0 10px 0;
+      padding: 0 0 8px 0;
+      border-bottom: 1px solid #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc-sidebar ul,
+    .toc-sidebar ul li {
+      list-style: none !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-sidebar ul li {
+      padding: 6px 0 !important;
+      background-image: none !important;
+    }
+
+    .toc-sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .toc-sidebar ul li a:hover {
+      color: #4A2060;
+      text-decoration: underline;
+    }
+
+    /* Section headings */
+    .section-title {
+      font: normal 180% 'century gothic', arial, sans-serif;
+      color: #222;
+      border-bottom: 2px solid #333;
+      padding-bottom: 6px;
+      margin: 30px 0 20px 0;
+      scroll-margin-top: 20px;
+    }
+
+    /* LinkedIn-style entry */
+    .entry {
+      padding: 18px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .entry-title {
+      font: bold 105% arial, sans-serif;
+      color: #222;
+      margin: 0;
+    }
+
+    .entry-date {
+      font-size: 0.9em;
+      color: #666;
+      font-style: italic;
+    }
+
+    .entry-org {
+      font-size: 0.98em;
+      color: #4A7AAB;
+      margin: 2px 0 8px 0;
+    }
+
+    .entry-desc {
+      font-size: 0.95em;
+      line-height: 1.6em;
+      color: #333;
+      margin: 6px 0 0 0;
+    }
+
+    .entry-desc ul {
+      list-style: disc !important;
+      margin: 6px 0 0 20px !important;
+      padding: 0;
+    }
+
+    .entry-desc ul li {
+      list-style: disc !important;
+      background: none !important;
+      background-image: none !important;
+      padding: 3px 0 3px 5px !important;
+      margin: 0 !important;
+      line-height: 1.5em;
+    }
   </style>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 </head>
 
 <body>
@@ -32,10 +162,103 @@
       </div>
     </div>
     <div id="site_content">
+
+      <aside class="toc-sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </aside>
+
       <div id="content">
         <p><a href="../research.html">&larr; Back to Research</a></p>
         <h1>Experience</h1>
-        <p><!-- [TODO] Write about your experience here. --></p>
+
+        <h2 class="section-title" id="work">Work</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">Project Assistant</h3>
+            <span class="entry-date">May 2024 &ndash; Present</span>
+          </div>
+          <p class="entry-org">TUBITAK &middot; Middle East Technical University, Ankara, Türkiye</p>
+          <div class="entry-desc">
+            Development of Flow Analysis and Design Optimization Software for Launch Pads (TUBITAK 1001-ARDEB, Project #123M355).
+            <ul>
+              <li>Investigation of pressure wave propagation in launch environments</li>
+              <li>Shape optimization of launch pad geometries using unsteady adjoint methods in the SU2 CFD solver</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">Research Intern (Erasmus+)</h3>
+            <span class="entry-date">Sep 2022 &ndash; Jan 2023</span>
+          </div>
+          <p class="entry-org">Politecnico di Milano &middot; Aerospace Engineering Department, Milan, Italy</p>
+          <div class="entry-desc">
+            Research internship on hypersonic flows using the SU2 CFD solver and its extension SU2-NEMO.
+            <ul>
+              <li>Aerodynamic evaluation of re-entry vehicles</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">Intern</h3>
+            <span class="entry-date">2022</span>
+          </div>
+          <p class="entry-org">Ayjet Flight School</p>
+          <div class="entry-desc">
+            Aircraft maintenance and airworthiness procedures.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">Intern</h3>
+            <span class="entry-date">2021</span>
+          </div>
+          <p class="entry-org">Öztürk Plastic</p>
+          <div class="entry-desc">
+            3D modeling and technical drawings using SolidWorks and GrabCAD.
+          </div>
+        </div>
+
+        <h2 class="section-title" id="education">Education</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">M.Sc. in Aerospace Engineering</h3>
+            <span class="entry-date">Feb 2026</span>
+          </div>
+          <p class="entry-org">Middle East Technical University (METU) &middot; Ankara, Türkiye</p>
+          <div class="entry-desc">
+            GPA: 3.50 / 4.00
+            <ul>
+              <li><strong>Thesis:</strong> Ignition Overpressure Mitigation in Launch Pads using Unsteady Adjoint Method</li>
+              <li><strong>Selected courses:</strong> Computational Fluid Dynamics on Unstructured Grids, Advanced Computational Fluid Dynamics, Advanced Heat and Mass Transfer, Turbulence Modelling for Engineering Flows, Hypersonic Flows, High Performance Computing in Aerospace Engineering, Advanced Mathematics for Engineers I</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <h3 class="entry-title">B.Sc. in Aerospace Engineering</h3>
+            <span class="entry-date">Jun 2022</span>
+          </div>
+          <p class="entry-org">Samsun University &middot; Samsun, Türkiye</p>
+          <div class="entry-desc">
+            GPA: 3.02 / 4.00
+            <ul>
+              <li><strong>Final project:</strong> Experimental and numerical investigation of the HM172 supersonic wind tunnel nozzle geometry (up to Mach 1.8), with Schlieren imaging compared against ANSYS Fluent CFD simulations.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
     <div id="footer">
