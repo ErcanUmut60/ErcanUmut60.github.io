@@ -5,7 +5,7 @@
     'nozzle.jpg',
     'Merlin-1-X4.jpg',
     'rocket.jpg',
-    'shuttle.jpg'
+    'shuttle.jpeg'
     // Add more filenames here as you add images to style/banners/
   ];
 

@@ -7,11 +7,168 @@
   <meta name="keywords" content="aerospace engineer, guitar, Ercan Umut Danışan" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <style>
     .sidebar { display: none; }
-    #content { width: 100%; }
+
+    #site_content {
+      overflow: hidden;
+      padding-top: 10px;
+    }
+
+    #content {
+      float: left;
+      width: 570px;
+      padding: 0 30px 0 0;
+      margin: 0;
+      text-align: justify;
+    }
+
+    #content h1 {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    /* TOC sidebar */
+    .toc-sidebar {
+      float: right;
+      width: 200px;
+      padding: 15px 18px;
+      background: #f7f7f2;
+      border: 1px solid #e2e0d3;
+      border-radius: 6px;
+      margin: 15px 0 0 0;
+      font-size: 0.95em;
+      position: sticky;
+      top: 15px;
+    }
+
+    .toc-sidebar h3 {
+      font: bold 100% 'century gothic', arial, sans-serif;
+      margin: 0 0 10px 0;
+      padding: 0 0 8px 0;
+      border-bottom: 1px solid #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc-sidebar ul,
+    .toc-sidebar ul li {
+      list-style: none !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc-sidebar ul li {
+      padding: 6px 0 !important;
+      background-image: none !important;
+    }
+
+    .toc-sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.92em;
+    }
+
+    .toc-sidebar ul li a:hover {
+      color: #4A2060;
+      text-decoration: underline;
+    }
+
+    /* Section blocks */
+    .project {
+      padding: 30px 0;
+      border-bottom: 1px solid #ddd;
+      scroll-margin-top: 20px;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+    }
+
+    .project-title {
+      font: normal 160% 'century gothic', arial, sans-serif;
+      color: #222;
+      margin: 0 0 4px 0;
+      padding: 0;
+    }
+
+    .project-meta {
+      font-size: 0.88em;
+      color: #777;
+      font-style: italic;
+      margin: 0 0 15px 0;
+    }
+
+    .project p {
+      font-size: 0.95em;
+      line-height: 1.7em;
+      margin: 0 0 12px 0;
+      padding: 0;
+      text-align: justify;
+    }
+
+    /* Figure styling */
+    .figure {
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    .figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .figure figcaption {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Two figures side-by-side */
+    .figure-row {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .figure-row .figure {
+      flex: 1;
+      margin: 0;
+    }
+
+    /* YouTube embed */
+    .video-embed {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin: 18px 0;
+      border-radius: 4px;
+      background: #000;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-caption {
+      font-size: 0.85em;
+      color: #666;
+      text-align: center;
+      margin-top: -8px;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
   </style>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <script src="../style/banner.js"></script>
 </head>
 
@@ -28,19 +185,75 @@
         <ul id="menu">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../research.html">Research</a></li>
-          <li class="selected"><a href="../interests.html">Interests</a></li>
+          <li class="selected"><a href="../interests.html">Beyond Research</a></li>
         </ul>
       </div>
     </div>
     <div id="site_content">
+
+      <aside class="toc-sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#styles">Styles &amp; Repertoire</a></li>
+          <li><a href="#performances">Performances</a></li>
+          <li><a href="#gear">Gear</a></li>
+        </ul>
+      </aside>
+
       <div id="content">
-        <p><a href="../interests.html">&larr; Back to Interests</a></p>
+        <p><a href="../interests.html">&larr; Back to Beyond Research</a></p>
         <h1>Guitar</h1>
-        <p><!-- [TODO] Write about your guitar interest here. --></p>
+        <p><!-- [TODO] Short intro paragraph about how you got into guitar and what it means to you. --></p>
+
+        <!-- ========================= ABOUT ========================= -->
+        <section id="about" class="project">
+          <h2 class="project-title">About</h2>
+          <p class="project-meta"><!-- [TODO] e.g. Started 20XX &middot; Self-taught / lessons --></p>
+
+          <p><!-- [TODO] How you began playing, what draws you to the instrument, your practice routine, etc. --></p>
+
+          <figure class="figure">
+            <img src="pictures/guitar.JPEG" alt="Guitar" />
+            <figcaption><!-- [TODO] Caption for this photo. --></figcaption>
+          </figure>
+        </section>
+
+        <!-- ========================= STYLES ========================= -->
+        <section id="styles" class="project">
+          <h2 class="project-title">Styles &amp; Repertoire</h2>
+          <p class="project-meta"><!-- [TODO] e.g. Classical, fingerstyle, rock --></p>
+
+          <p><!-- [TODO] Genres you play, composers/artists you enjoy, pieces you're currently working on. --></p>
+        </section>
+
+        <!-- ========================= PERFORMANCES ========================= -->
+        <section id="performances" class="project">
+          <h2 class="project-title">Performances</h2>
+          <p class="project-meta"><!-- [TODO] e.g. Recordings, recitals, jam sessions --></p>
+
+          <p><!-- [TODO] Notable performances or recordings you'd like to share. --></p>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption"><!-- [TODO] Replace the YouTube embed URL with one of your recordings. --></p>
+        </section>
+
+        <!-- ========================= GEAR ========================= -->
+        <section id="gear" class="project">
+          <h2 class="project-title">Gear</h2>
+          <p class="project-meta"><!-- [TODO] Instruments, amps, accessories --></p>
+
+          <p><!-- [TODO] Describe the guitars and equipment you play. --></p>
+
+          <figure class="figure">
+            <img src="pictures/guitar.JPEG" alt="Guitar gear" />
+            <figcaption><!-- [TODO] Caption. --></figcaption>
+          </figure>
+        </section>
+
       </div>
-    </div>
-    <div id="footer">
-      Copyright &copy; Ercan Umut Danışan
     </div>
   </div>
 </body>
