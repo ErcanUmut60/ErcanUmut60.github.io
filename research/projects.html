@@ -66,25 +66,11 @@
           <h2 class="project-title">Unsteady Adjoint Optimization of a Flame Deflector</h2>
           <p class="project-meta">M.Sc. Thesis &middot; 2024 &ndash; 2026 &middot; METU</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>When a solid rocket booster ignites, it launches strong, transient Ignition Overpressure (IOP) waves into the launch environment. These waves reflect off the flame deflector and travel back toward the vehicle, where the high-amplitude loads can damage the structure and sensitive payloads. My thesis asks whether the deflector itself can be reshaped to weaken these reflected waves.</p>
 
-          <div class="figure-row">
-            <figure class="figure">
-              <img src="../style/banner.jpg" alt="Baseline geometry" />
-              <figcaption>Baseline deflector.</figcaption>
-            </figure>
-            <figure class="figure">
-              <img src="../style/banner.jpg" alt="Optimized geometry" />
-              <figcaption>Optimized deflector.</figcaption>
-            </figure>
-          </div>
+          <p>Because IOP and the starting vortex that follows it are inherently unsteady, steady-state optimization is not enough. I used the unsteady discrete adjoint framework in the open-source SU2 solver to compute time-accurate shape sensitivities of a 45&deg; flat-plate deflector, and modified the window-averaging formulation in the source code to support L<sub>p</sub>-norm objectives that target peak pressures in time.</p>
 
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-          <figure class="figure">
-            <img src="../style/banner.jpg" alt="Pressure history comparison" />
-            <figcaption>Figure 2. Pressure history showing IOP reduction after optimization.</figcaption>
-          </figure>
+          <p>Two objectives were studied. Minimizing the pressure at a single probe point near the rocket reduced the objective by up to 12.3%, though convergence was oscillatory. Minimizing the surface- and time-averaged pressure on the rocket wall converged smoothly and reduced the objective by 32.6% with 25 design variables, and an L<sub>20</sub> norm formulation further cut the peak pressure while producing a more buildable geometry. The entire workflow uses open-source tools, so the results can be reproduced.</p>
         </section>
 
         <!-- ========================= FLAME DEFLECTOR ========================= -->
@@ -93,35 +79,24 @@
           <p class="project-meta">TUBITAK 1001-ARDEB #123M355 &middot; 2024 &ndash; 2025</p>
 
           <h3>2D Investigation</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Before optimizing anything, the launch environment had to be simulated reliably. Using a benchmark configuration from the literature, a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector, I ran time-accurate SU2 simulations with a chamber pressure ramped up to 782&nbsp;kPa to mimic ignition. A verification study set the time step, inner-iteration tolerances and mesh resolution, and compared structured and unstructured grids.</p>
 
-          <div class="figure-row">
-            <figure class="figure">
-              <img src="../style/banner.jpg" alt="2D mesh" />
-              <figcaption>Computational mesh.</figcaption>
-            </figure>
-            <figure class="figure">
-              <img src="../style/banner.jpg" alt="2D Mach contour" />
-              <figcaption>Mach number contour.</figcaption>
-            </figure>
-          </div>
-
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-          <h3>3D Investigation</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-          <figure class="figure">
-            <img src="../style/banner.jpg" alt="3D pressure field" />
-            <figcaption>Figure 3. 3D pressure wave propagation at a launch pad.</figcaption>
-          </figure>
+          <p>Inviscid (Euler) and viscous (RANS) solutions were compared against probe-point data from earlier studies. Both captured the primary IOP waves with only minor differences, which showed that the far cheaper Euler simulations are sufficient for the optimization runs.</p>
 
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/W3qELA4IXSc" title="Pressure Environment Investigation After Solid Rocket Booster Ignition for a 2D Benchmark Case" allowfullscreen></iframe>
           </div>
-          <p class="video-caption">Video 2. 3D IOP simulation (placeholder).</p>
+          <p class="video-caption">Video 2. Pressure environment after solid rocket booster ignition for the 2D benchmark case.</p>
 
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3>3D Investigation</h3>
+          <p>To move toward realistic launch pads, I modeled a 3D launch pad geometry from the literature: a four-nozzle vehicle above a deflector with a 60&deg; impingement section, a launch stand close to the rocket, and side walls that keep the flow within the pad. The fully structured volume mesh has nearly 15 million cells, and convergence was accelerated with multigrid on top of an adaptive CFL strategy.</p>
+
+          <p>Pressure probes at the nozzle centerline, the base of the rocket, the deflector surface and beneath the launch stand trace how the IOP waves spread through the pad over time. A single inviscid run takes more than a week and its contour output for just 0.03&nbsp;s of flow reaches about 2&nbsp;TB, which is why 3D unsteady adjoint optimization is planned as future work.</p>
+
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/HyaGymjxPKY" title="Launch Environment Investigation of a 3D Solid Rocket Booster Benchmark Case" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Video 3. Launch environment investigation of a 3D solid rocket booster benchmark case.</p>
         </section>
 
         <!-- ========================= MILANO ========================= -->
@@ -133,7 +108,7 @@
 
           <figure class="figure">
             <img src="../style/banner.jpg" alt="Re-entry capsule" />
-            <figcaption>Figure 4. Placeholder &mdash; re-entry capsule Mach contour.</figcaption>
+            <figcaption>Figure 2. Placeholder &mdash; re-entry capsule Mach contour.</figcaption>
           </figure>
 
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
