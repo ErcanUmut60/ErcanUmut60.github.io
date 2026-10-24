@@ -1,213 +1,89 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ercan Umut Danışan | Publications</title>
   <meta name="description" content="Publications - Ercan Umut Danışan" />
   <meta name="keywords" content="aerospace engineer, publications, Ercan Umut Danışan" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style/style.css" />
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-  <style>
-    /* Hide the default sidebar */
-    .sidebar { display: none; }
-
-    /* Site content wrapper */
-    #site_content {
-      overflow: hidden;
-      padding-top: 10px;
-    }
-
-    /* Main content area */
-    #content {
-      float: left;
-      width: 570px;
-      padding: 0 30px 0 0;
-      margin: 0;
-      text-align: justify;
-    }
-
-    #content h1 {
-      margin-top: 0;
-      padding-top: 10px;
-    }
-
-    /* TOC sidebar on the right */
-    .toc-sidebar {
-      float: right;
-      width: 200px;
-      padding: 15px 18px;
-      background: #f7f7f2;
-      border: 1px solid #e2e0d3;
-      border-radius: 6px;
-      margin: 15px 0 0 0;
-      font-size: 0.95em;
-      position: sticky;
-      top: 15px;
-    }
-
-    .toc-sidebar h3 {
-      font: bold 100% 'century gothic', arial, sans-serif;
-      margin: 0 0 10px 0;
-      padding: 0 0 8px 0;
-      border-bottom: 1px solid #ccc;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .toc-sidebar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .toc-sidebar ul li {
-      list-style: none;
-      background: none;
-      padding: 6px 0;
-      margin: 0;
-    }
-
-    .toc-sidebar ul li a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .toc-sidebar ul li a:hover {
-      color: #4A2060;
-      text-decoration: underline;
-    }
-
-    /* Publication sections */
-    .pub-section {
-      padding-top: 20px;
-      scroll-margin-top: 20px;
-    }
-
-    .pub-section h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-
-    /* Year heading */
-    .pub-year {
-      font: normal 220% 'century gothic', arial, sans-serif;
-      color: #4A7AAB;
-      margin: 30px 0 10px 0;
-      padding: 0;
-    }
-
-    /* Publication list */
-    .pub-list {
-      list-style: none !important;
-      margin: 0 0 25px 0;
-      padding: 0;
-    }
-
-    .pub-list li {
-      list-style: none !important;
-      background: none !important;
-      background-image: none !important;
-      padding: 22px 0 22px 30px !important;
-      margin: 0;
-      border-bottom: 1px solid #e5e5e5;
-      line-height: 1.7em;
-      font-size: 0.95em;
-    }
-
-    .pub-list li:last-child {
-      border-bottom: none;
-    }
-
-    .pub-list li a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-
-    .pub-list li a:hover {
-      text-decoration: underline;
-    }
-
-    .pub-list .authors,
-    .pub-list .year,
-    .pub-list .title {
-      color: #222;
-    }
-
-    /* Remove bullets/circles from the TOC ul too */
-    .toc-sidebar ul,
-    .toc-sidebar ul li {
-      list-style: none !important;
-    }
-
-    .toc-sidebar ul li {
-      background-image: none !important;
-      padding-left: 0 !important;
-    }
-  </style>
   <script src="../style/banner.js"></script>
 </head>
 
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <h1><a href="../index.html">Ercan Umut<span class="logo_colour"> Danışan</span></a></h1>
-          <h2>Aerospace Engineer, MSc.</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <li><a href="../index.html">Home</a></li>
-          <li class="selected"><a href="../research.html">Research</a></li>
-          <li><a href="../interests.html">Beyond Research</a></li>
-        </ul>
-      </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Ercan Umut Danışan<span>Aerospace Engineer, MSc.</span></a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../interests.html">Beyond Research</a>
+      </nav>
     </div>
-    <div id="site_content">
+  </header>
 
-      <aside class="toc-sidebar">
-        <h3>On this page</h3>
-        <ul>
-          <li><a href="#year-2026">2026</a></li>
-          <li><a href="#year-2025">2025</a></li>
-        </ul>
-      </aside>
+  <section class="page-hero" id="logo">
+    <div class="container">
+      <p class="eyebrow"><a href="../research.html">Research</a></p>
+      <h1>Publications</h1>
+    </div>
+  </section>
 
-      <div id="content">
-        <p><a href="../research.html">&larr; Back to Research</a></p>
-        <h1>Publications</h1>
+  <main class="container layout">
+    <article class="panel">
+      <a class="back-link" href="../research.html">&larr; Back to Research</a>
 
         <h3 class="pub-year" id="year-2026">2026</h3>
         <ul class="pub-list">
           <li>
-            E. U. Danışan and S. Eyi, &ldquo;Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-2297">10.2514/6.2026-2297</a>.
+            <span class="me">E. U. Danışan</span> and S. Eyi, &ldquo;Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-2297">10.2514/6.2026-2297</a>.
           </li>
           <li>
-            E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Investigation of ignition overpressure over a launch pad using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-0509">10.2514/6.2026-0509</a>.
+            <span class="me">E. U. Danışan</span>, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Investigation of ignition overpressure over a launch pad using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-0509">10.2514/6.2026-0509</a>.
           </li>
           <li>
-            D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-1340">10.2514/6.2026-1340</a>.
+            D. Gundem, T. Ghorbani Iriolya, <span class="me">E. U. Danışan</span>, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical analysis of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>AIAA SCITECH 2026 Forum</em>, Orlando, FL, USA, Jan. 2026, doi: <a href="https://doi.org/10.2514/6.2026-1340">10.2514/6.2026-1340</a>.
           </li>
         </ul>
 
         <h3 class="pub-year" id="year-2025">2025</h3>
         <ul class="pub-list">
           <li>
-            E. U. Danışan, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+            <span class="me">E. U. Danışan</span>, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Assessment of ignition overpressure at rocket launch pads using SU2 with comparative analysis of open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
           </li>
           <li>
-            D. Gundem, T. Ghorbani Iriolya, E. U. Danışan, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+            D. Gundem, T. Ghorbani Iriolya, <span class="me">E. U. Danışan</span>, E. B. Cetin, Y. Atilkan, and S. Eyi, &ldquo;Numerical investigation of pressure wave propagation at rocket launch pads using open-source CFD solvers,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
           </li>
           <li>
-            E. U. Danışan and S. Eyi, &ldquo;Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
+            <span class="me">E. U. Danışan</span> and S. Eyi, &ldquo;Unsteady adjoint-based design optimization for mitigating ignition overpressure in launch pads,&rdquo; in <em>12th Ankara International Aerospace Conference (AIAC)</em>, Ankara, Türkiye, 2025.
           </li>
         </ul>
+    </article>
 
+    <aside class="toc">
+      <h3>On this page</h3>
+      <ul>
+          <li><a href="#year-2026">2026</a></li>
+          <li><a href="#year-2025">2025</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Ercan Umut Danışan</p>
+      <div class="footer-links">
+        <a href="mailto:ercan.danisan@metu.edu.tr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ercanumutdanışan/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ErcanUmut60" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

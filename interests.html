@@ -1,124 +1,84 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ercan Umut Danışan | Beyond Research</title>
   <meta name="description" content="Hobbies and activities of Ercan Umut Danışan beyond research" />
   <meta name="keywords" content="aerospace engineer, hobbies, beyond research, Ercan Umut Danışan" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-  <style>
-    .sidebar { display: none; }
-    #content { width: 100%; }
-
-    .cards-container {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      padding: 20px 0;
-    }
-
-    .card {
-      flex: 1;
-      min-width: 200px;
-      background: #FFF;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      overflow: hidden;
-      text-decoration: none;
-      color: #000;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-
-    .card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
-      transform: translateY(-3px);
-      text-decoration: none;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-body {
-      padding: 15px 20px 20px 20px;
-      text-align: center;
-    }
-
-    .card-body h2 {
-      font: bold 120% 'century gothic', arial, sans-serif;
-      color: #4A2060;
-      margin: 0 0 10px 0;
-      padding: 10px 0 5px 0;
-      text-transform: uppercase;
-    }
-
-    .card-body p {
-      font-size: 0.95em;
-      line-height: 1.6em;
-      padding: 0;
-      color: #444;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style/style.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="style/banner.js"></script>
 </head>
 
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <h1><a href="index.html">Ercan Umut<span class="logo_colour"> Danışan</span></a></h1>
-          <h2>Aerospace Engineer, MSc.</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li class="selected"><a href="interests.html">Beyond Research</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Ercan Umut Danışan<span>Aerospace Engineer, MSc.</span></a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="interests.html" class="active">Beyond Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero" id="logo">
+    <div class="container">
+      <h1>Beyond Research</h1>
+    </div>
+  </section>
+
+  <main class="container layout single">
+    <div>
+      <p class="lead">A glimpse into the hobbies and activities I enjoy outside of academia and engineering.</p>
+      <div class="cards">
+
+        <a href="interests/guitar.html" class="card">
+          <img src="interests/pictures/guitar.JPEG" alt="Guitar" />
+          <div class="card-body">
+            <h2>Guitar</h2>
+            <p>Playing, repertoire, and gear.</p>
+            <span class="card-link">Explore &rarr;</span>
+          </div>
+        </a>
+
+        <a href="interests/astronomy.html" class="card">
+          <img src="interests/pictures/astronomy.JPEG" alt="Astronomy" />
+          <div class="card-body">
+            <h2>Astronomy</h2>
+            <p>From a first backyard telescope to dark-sky nights and talks at METU.</p>
+            <span class="card-link">Explore &rarr;</span>
+          </div>
+        </a>
+
+        <a href="interests/archeology.html" class="card">
+          <img src="interests/pictures/archeology.JPEG" alt="Archeology" />
+          <div class="card-body">
+            <h2>Archeology</h2>
+            <p>Sites visited, favourite eras, and recommended reading.</p>
+            <span class="card-link">Explore &rarr;</span>
+          </div>
+        </a>
+
       </div>
     </div>
-    <div id="site_content">
-      <div id="content">
-        <h1>Beyond Research</h1>
-        <p>A glimpse into the hobbies and activities I enjoy outside of academia and engineering.</p>
-        <div class="cards-container">
+  </main>
 
-          <a href="interests/guitar.html" class="card">
-            <img src="interests/pictures/guitar.JPEG" alt="Guitar" />
-            <div class="card-body">
-              <h2>Guitar</h2>
-              <p><!-- [TODO] Short description about your guitar interest --></p>
-            </div>
-          </a>
-
-          <a href="interests/astronomy.html" class="card">
-            <!-- [TODO] Replace with your image -->
-            <img src="interests/pictures/astronomy.JPEG" alt="Astronomy" />
-            <div class="card-body">
-              <h2>Astronomy</h2>
-              <p><!-- [TODO] Short description about your astronomy interest --></p>
-            </div>
-          </a>
-
-          <a href="interests/archeology.html" class="card">
-            <!-- [TODO] Replace with your image -->
-            <img src="interests/pictures/archeology.JPEG" alt="Archeology" />
-            <div class="card-body">
-              <h2>Archeology</h2>
-              <p><!-- [TODO] Short description about your archeology interest --></p>
-            </div>
-          </a>
-
-        </div>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Ercan Umut Danışan</p>
+      <div class="footer-links">
+        <a href="mailto:ercan.danisan@metu.edu.tr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ercanumutdanışan/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ErcanUmut60" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

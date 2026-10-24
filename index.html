@@ -1,141 +1,105 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ercan Umut Danışan | Aerospace Engineer</title>
   <meta name="description" content="Personal portfolio of Ercan Umut Danışan, Aerospace Engineer, MSc." />
   <meta name="keywords" content="aerospace engineer, portfolio, Ercan Umut Danışan" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    #logo_text { display: none; }
-    
-    .sidebar { 
-      float: left; 
-      width: 230px;
-    }
-
-    .sidebar .profile-photo {
-      width: 200px;
-    }
-    
-    #content { 
-      float: left;
-      padding-left: 25px; 
-      width: 550px; 
-      position: relative;
-      text-align: justify;
-    }
-
-    /* This creates the custom line */
-    #content::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 22px;
-      bottom: 15px;
-      width: 1px;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    /* Styles the Font Awesome icons */
-    .sidebar ul.social-links li a i {
-      margin-right: 10px;
-      font-size: 1.2em;
-      color: #333;
-    }
-
-    /* Removes the default paperclip background and extra padding */
-    .sidebar ul li a {
-      background-image: none !important;
-      padding-left: 0 !important;
-      text-decoration: none;
-    }
-
-    .sidebar ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* Address block */
-    .sidebar .address {
-      font-size: 0.85em;
-      line-height: 1.5em;
-      color: #444;
-      margin-top: 15px;
-      padding-top: 12px;
-      border-top: 1px solid #ddd;
-      text-align: justify;
-    }
-
-    .sidebar .address i {
-      color: #333;
-      margin-right: 6px;
-    }
-
-    /* Social links spacing */
-    .sidebar ul.social-links {
-      margin-bottom: 10px;
-    }
-
-    .sidebar ul.social-links li {
-      padding: 4px 0;
-      font-size: 0.88em;
-    }
-
-    .sidebar ul.social-links li.email {
-      white-space: nowrap;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style/style.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
   <script src="style/banner.js"></script>
 </head>
 
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <h1><a href="index.html">Ercan Umut<span class="logo_colour"> Danışan</span></a></h1>
-          <h2>Aerospace Engineer, MSc.</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="interests.html">Beyond Research</a></li>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Ercan Umut Danışan<span>Aerospace Engineer, MSc.</span></a>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
+        <a href="interests.html">Beyond Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="logo">
+    <div class="container">
+      <p class="eyebrow">Aerospace Engineering &middot; METU</p>
+      <h1>Ercan Umut Danışan</h1>
+      <p class="tagline">Computational fluid dynamics and adjoint-based shape optimization for launch environments and high-speed flows.</p>
+    </div>
+  </section>
+
+  <main class="container layout home">
+    <aside class="panel profile">
+      <img src="personal_photos/biyometrik.jpg" alt="Ercan Umut Danışan" class="profile-photo" />
+      <h2>Ercan Umut Danışan</h2>
+      <p class="role">Aerospace Engineer, MSc.</p>
+      <p class="affil">TUBITAK Project Scholar<br />Middle East Technical University</p>
+
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:ercan.danisan@metu.edu.tr">ercan.danisan@metu.edu.tr</a></li>
+        <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ercanumutdanışan/">LinkedIn</a></li>
+        <li><i class="fab fa-github"></i><a href="https://github.com/ErcanUmut60">GitHub</a></li>
+        <li><i class="fa-solid fa-location-dot"></i><span class="address">ODTÜ Havacılık ve Uzay Mühendisliği Fakültesi, 2. Kat, 232 Numaralı Kontrol ve Simülasyon Laboratuvarı, 06800 Çankaya, Ankara/Türkiye</span></li>
+      </ul>
+    </aside>
+
+    <article class="panel">
+      <h2>About</h2>
+      <p class="lead">I'm <strong>Ercan Umut Danışan</strong>, an Aerospace Engineer and M.Sc. candidate at Middle East Technical University (METU), working under the supervision of Prof. Dr. Sinan Eyi. My thesis focuses on <strong>Ignition Overpressure (IOP) mitigation in launch pads using unsteady adjoint-based shape optimization</strong>, developed with the open-source SU2 CFD solver.</p>
+      <p>Currently, I serve as a Project Assistant on the TUBITAK 1001-ARDEB project <em>"Development of Flow Analysis and Design Optimization Software for Launch Pads"</em> (#123M355), where I investigate pressure wave propagation in launch environments and design optimization methodologies for pad geometries. My broader research interests include computational fluid dynamics on unstructured grids, hypersonic flows, turbulence modeling, and high-performance computing.</p>
+      <p>Prior to my M.Sc., I earned a B.Sc. in Aerospace Engineering from Samsun University and completed an Erasmus+ research internship at <strong>Politecnico di Milano</strong>, where I worked on hypersonic flow analysis of re-entry vehicles using SU2-NEMO.</p>
+
+      <section class="section">
+        <h3 class="section-heading">Research Interests</h3>
+        <ul class="tags">
+          <li>Computational Fluid Dynamics</li>
+          <li>Adjoint-Based Shape Optimization</li>
+          <li>Ignition Overpressure</li>
+          <li>Hypersonic &amp; Non-Equilibrium Flows</li>
+          <li>Turbulence Modeling</li>
+          <li>High-Performance Computing</li>
+          <li>SU2</li>
         </ul>
+      </section>
+
+      <section class="section">
+        <h3 class="section-heading">Education</h3>
+        <ul class="timeline">
+          <li><span class="when">2026</span><span class="what"><strong>M.Sc. in Aerospace Engineering</strong>, Middle East Technical University</span></li>
+          <li><span class="when">2022 &ndash; 2023</span><span class="what"><strong>Erasmus+ Research Internship</strong>, Politecnico di Milano</span></li>
+          <li><span class="when">2022</span><span class="what"><strong>B.Sc. in Aerospace Engineering</strong>, Samsun University</span></li>
+        </ul>
+        <a class="more-link" href="research/experience.html">Full experience &rarr;</a>
+      </section>
+
+      <section class="section">
+        <h3 class="section-heading">Recent Publications</h3>
+        <ul class="pub-list pub-compact">
+          <li><span class="me">E. U. Danışan</span> and S. Eyi, &ldquo;Mitigation of ignition overpressure in launch pads via unsteady adjoint-based optimization,&rdquo; <em>AIAA SCITECH 2026 Forum</em>, 2026. <a href="https://doi.org/10.2514/6.2026-2297">doi</a></li>
+          <li><span class="me">E. U. Danışan</span>, M. O. Duru, T. Ghorbani Iriolya, D. Gundem, and S. Eyi, &ldquo;Investigation of ignition overpressure over a launch pad using open-source CFD solvers,&rdquo; <em>AIAA SCITECH 2026 Forum</em>, 2026. <a href="https://doi.org/10.2514/6.2026-0509">doi</a></li>
+        </ul>
+        <a class="more-link" href="research/publications.html">All publications &rarr;</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Ercan Umut Danışan</p>
+      <div class="footer-links">
+        <a href="mailto:ercan.danisan@metu.edu.tr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ercanumutdanışan/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ErcanUmut60" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
-    <div id="site_content">
-      <div class="sidebar">
-        <img src="personal_photos/biyometrik.jpg" alt="Ercan Umut Danışan" class="profile-photo" />
-        <h3>Ercan Umut Danışan</h3>
-        <p><strong>Aerospace Engineer, MSc.</strong><br />
-        TUBITAK Project Scholar<br />
-        Ankara, Türkiye</p>
-
-        <ul class="social-links">
-          <li class="email"><a href="mailto:ercan.danisan@metu.edu.tr"><i class="fa-solid fa-envelope"></i> ercan.danisan@metu.edu.tr</a></li>
-          <li><a href="https://www.linkedin.com/in/ercanumutdanışan/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="https://github.com/ErcanUmut60"><i class="fab fa-github"></i> GitHub</a></li>
-        </ul>
-
-        <p class="address">
-          <i class="fa-solid fa-location-dot"></i>
-          ODTÜ Havacılık ve Uzay Mühendisliği Fakültesi, 2. Kat, 232 Numaralı Kontrol ve Simülasyon Laboratuvarı, 06800 Çankaya, Ankara/Türkiye
-        </p>
-      </div>
-      <div id="content">
-        <h1>Welcome</h1>
-        <p>I'm <strong>Ercan Umut Danışan</strong>, an Aerospace Engineer and M.Sc. candidate at Middle East Technical University (METU), working under the supervision of Prof. Dr. Sinan Eyi. My thesis focuses on <strong>Ignition Overpressure (IOP) mitigation in launch pads using unsteady adjoint-based shape optimization</strong>, developed with the open-source SU2 CFD solver.</p>
-        <p>Currently, I serve as a Project Assistant on the TUBITAK 1001-ARDEB project <em>"Development of Flow Analysis and Design Optimization Software for Launch Pads"</em> (#123M355), where I investigate pressure wave propagation in launch environments and design optimization methodologies for pad geometries. My broader research interests include computational fluid dynamics on unstructured grids, hypersonic flows, turbulence modeling, and high-performance computing.</p>
-        <p>Prior to my M.Sc., I earned a B.Sc. in Aerospace Engineering from Samsun University and completed an Erasmus+ research internship at <strong>Politecnico di Milano</strong>, where I worked on hypersonic flow analysis of re-entry vehicles using SU2-NEMO.</p>
-        <p>Here you can explore my <a href="research.html">research</a> &mdash; including <a href="research/publications.html">publications</a>, <a href="research/projects.html">projects</a>, and <a href="research/experience.html">experience</a> &mdash; or take a look <a href="interests.html">beyond research</a> at my hobbies and activities outside academia.</p>
-      </div>
-    </div>
-  </div>
+  </footer>
 </body>
 </html>
