@@ -227,8 +227,7 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
 
 .profile p { text-align: center; }
 
-.profile .role { margin: 0 0 2px; color: var(--ink-soft); font-weight: 500; }
-.profile .affil { margin: 0 0 18px; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+.profile .role { margin: 0 0 18px; color: var(--ink-soft); font-weight: 500; }
 
 .contact-list {
   list-style: none;
