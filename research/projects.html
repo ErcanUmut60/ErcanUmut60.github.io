@@ -63,22 +63,22 @@
 
           <p>When a solid rocket booster ignites, it launches strong, transient Ignition Overpressure (IOP) waves into the launch environment. These waves reflect off the flame deflector and travel back toward the vehicle, where the high-amplitude loads can damage the structure and sensitive payloads. My thesis asks whether the deflector itself can be reshaped to weaken these reflected waves.</p>
 
-          <p>Because IOP and the starting vortex that follows it are inherently unsteady, steady-state optimization is not enough. I used the unsteady discrete adjoint framework in the open-source SU2 solver to compute time-accurate shape sensitivities of a 45&deg; flat-plate deflector, and modified the window-averaging formulation in the source code to support L<sub>p</sub>-norm objectives that target peak pressures in time.</p>
+          <p>Because IOP and the starting vortex that follows it are inherently unsteady, the optimization has to be time-accurate. I used the unsteady discrete adjoint framework in the open-source SU2 solver to reshape a 45&deg; flat-plate deflector, with the deflector wall controlled by the points of a free-form deformation (FFD) box. The objective measures the pressure at a probe point over a window that covers both the IOP peak and the vortex suction. It penalizes overpressure fully and suction with a lower weight, so the larger suction does not dominate.</p>
 
-          <p>The first objective targets probe point 10, a near-field point beside the rocket that was validated against the literature. Simulations showed that the flat-plate deflector strengthens the starting vortex, creating a dangerous suction effect near the vehicle. The deflector wall was parameterized with a free-form deformation (FFD) box whose control points act as design variables. Over a short window covering the IOP peak, the best case (20 design variables) reduced the objective by 12.3% by forming a cavity at the impingement point that redirects the flow. This lowered the peak overpressure at the probe by 4.2% and weakened the vortex suction by 11.7%, even though the vortex lay outside the optimization window.</p>
+          <p>For probe point 10, just beside the rocket, the optimizer carves a concave cavity that moves the deflector away from the probe. With one row of FFD points moving, the objective drops by up to 26%, mostly through weaker suction. When both rows of FFD points can move over a 1.6&nbsp;m wall, the objective drops by 44.8%, the IOP peak by 18.8% and the vortex suction by 17.7%.</p>
 
           <div class="figure-row">
             <figure class="figure">
-              <img src="pictures/adjoint_wall_shapes.png" alt="Baseline and optimized deflector wall shapes inside the FFD box for 8, 10, 12 and 14 design variables" />
-              <figcaption>Figure 2. Optimized deflector walls for different numbers of design variables (DV), with the FFD box control points.</figcaption>
+              <img src="pictures/adjoint_wall_shapes.png" alt="Baseline and optimized deflector wall shapes for 8, 10, 12 and 14 design variables, with FFD control points" />
+              <figcaption>Figure 2. Optimized deflector walls for 8&ndash;14 design variables (DV). The purple box shows how the FFD control points move in the 14-DV case.</figcaption>
             </figure>
             <figure class="figure">
               <img src="pictures/adjoint_probe10_designs.png" alt="Nondimensional pressure at probe point 10 for the baseline and optimized designs" />
-              <figcaption>Figure 3. Pressure at probe point 10 for the baseline and optimized designs.</figcaption>
+              <figcaption>Figure 3. Pressure at probe point 10 for the baseline and optimized designs: deformation walls of length L = 1&nbsp;m and 1.6&nbsp;m with one moving FFD row, and L = 1.6&nbsp;m with both rows (j = 0,1) moving.</figcaption>
             </figure>
           </div>
 
-          <p>The probe-point objective converged in an oscillatory way. A second objective, the surface- and time-averaged pressure on the rocket wall, converged smoothly and reduced the objective by 32.6% with 25 design variables. Applying an L<sub>20</sub> norm cut the peak pressure further and produced a more buildable geometry. The entire workflow uses open-source tools, so the results can be reproduced.</p>
+          <p>Targeting a probe on the rocket surface instead produces the opposite shape: a convex bump beneath the nozzle that reduces the objective by 43.2% and the peak surface overpressure by 20.1%. The best deflector shape therefore depends strongly on where the pressure is to be reduced. To my knowledge, this is the first time flame deflector shapes have been obtained from the unsteady adjoint sensitivity of a transient IOP&ndash;vortex objective, and the whole workflow uses open-source tools so it can be reproduced.</p>
         </section>
 
         <!-- ========================= FLAME DEFLECTOR ========================= -->
@@ -87,9 +87,9 @@
           <p class="project-meta">TUBITAK 1001-ARDEB #123M355 &middot; 2024 &ndash; 2025</p>
 
           <h3>2D Investigation</h3>
-          <p>Before optimizing anything, the launch environment had to be simulated reliably. Using a benchmark configuration from the literature, a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector, I ran time-accurate SU2 simulations with a chamber pressure ramped up to 782&nbsp;kPa to mimic ignition. A verification study set the time step, inner-iteration tolerances and mesh resolution, and compared structured and unstructured grids.</p>
+          <p>Before optimizing anything, the launch environment had to be simulated reliably. I used a benchmark from the literature: a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector. Time-accurate SU2 simulations ramp the inlet total pressure to mimic ignition. Right after ignition, the expanding plume compresses the air between the nozzle and the deflector into the IOP wave. A starting vortex then rolls up along the deflector and creates a suction region near the vehicle, and high-frequency acoustic waves eventually dominate the field.</p>
 
-          <p>Inviscid (Euler) and viscous (RANS) solutions were compared against probe-point data from earlier studies. Both captured the primary IOP waves with only minor differences, which showed that the far cheaper Euler simulations are sufficient for the optimization runs. At probe point 10 the IOP development nearly matches the reference data. The inviscid solution predicts a deeper vortex suction, because without eddy viscosity there is nothing to damp the vortex.</p>
+          <p>Mesh and time-step studies showed that the main IOP and suction peaks are insensitive to grid resolution, while the later acoustic fluctuations are not. Inviscid (Euler) and viscous (RANS) solutions both agree well with published results in the IOP region. The inviscid model predicts a stronger suction peak, because it lacks viscous damping. Since the Euler simulations capture the main IOP&ndash;vortex structure at a fraction of the cost (about 30 minutes vs. 9 hours per run), they were used for the optimization.</p>
 
           <figure class="figure narrow">
             <img src="pictures/probe10_validation.png" alt="Nondimensional pressure at probe point 10: inviscid and viscous SU2 solutions compared with Nonomura et al." />
