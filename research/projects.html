@@ -65,7 +65,20 @@
 
           <p>Because IOP and the starting vortex that follows it are inherently unsteady, steady-state optimization is not enough. I used the unsteady discrete adjoint framework in the open-source SU2 solver to compute time-accurate shape sensitivities of a 45&deg; flat-plate deflector, and modified the window-averaging formulation in the source code to support L<sub>p</sub>-norm objectives that target peak pressures in time.</p>
 
-          <p>Two objectives were studied. Minimizing the pressure at a single probe point near the rocket reduced the objective by up to 12.3%, though convergence was oscillatory. Minimizing the surface- and time-averaged pressure on the rocket wall converged smoothly and reduced the objective by 32.6% with 25 design variables, and an L<sub>20</sub> norm formulation further cut the peak pressure while producing a more buildable geometry. The entire workflow uses open-source tools, so the results can be reproduced.</p>
+          <p>The first objective targets probe point 10, a near-field point beside the rocket that was validated against the literature. Simulations showed that the flat-plate deflector strengthens the starting vortex, creating a dangerous suction effect near the vehicle. The deflector wall was parameterized with a free-form deformation (FFD) box whose control points act as design variables. Over a short window covering the IOP peak, the best case (20 design variables) reduced the objective by 12.3% by forming a cavity at the impingement point that redirects the flow. This lowered the peak overpressure at the probe by 4.2% and weakened the vortex suction by 11.7%, even though the vortex lay outside the optimization window.</p>
+
+          <div class="figure-row">
+            <figure class="figure">
+              <img src="pictures/adjoint_wall_shapes.png" alt="Baseline and optimized deflector wall shapes inside the FFD box for 8, 10, 12 and 14 design variables" />
+              <figcaption>Figure 2. Optimized deflector walls for different numbers of design variables (DV), with the FFD box control points.</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="pictures/adjoint_probe10_designs.png" alt="Nondimensional pressure at probe point 10 for the baseline and optimized designs" />
+              <figcaption>Figure 3. Pressure at probe point 10 for the baseline and optimized designs.</figcaption>
+            </figure>
+          </div>
+
+          <p>The probe-point objective converged in an oscillatory way. A second objective, the surface- and time-averaged pressure on the rocket wall, converged smoothly and reduced the objective by 32.6% with 25 design variables. Applying an L<sub>20</sub> norm cut the peak pressure further and produced a more buildable geometry. The entire workflow uses open-source tools, so the results can be reproduced.</p>
         </section>
 
         <!-- ========================= FLAME DEFLECTOR ========================= -->
@@ -76,7 +89,12 @@
           <h3>2D Investigation</h3>
           <p>Before optimizing anything, the launch environment had to be simulated reliably. Using a benchmark configuration from the literature, a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector, I ran time-accurate SU2 simulations with a chamber pressure ramped up to 782&nbsp;kPa to mimic ignition. A verification study set the time step, inner-iteration tolerances and mesh resolution, and compared structured and unstructured grids.</p>
 
-          <p>Inviscid (Euler) and viscous (RANS) solutions were compared against probe-point data from earlier studies. Both captured the primary IOP waves with only minor differences, which showed that the far cheaper Euler simulations are sufficient for the optimization runs.</p>
+          <p>Inviscid (Euler) and viscous (RANS) solutions were compared against probe-point data from earlier studies. Both captured the primary IOP waves with only minor differences, which showed that the far cheaper Euler simulations are sufficient for the optimization runs. At probe point 10 the IOP development nearly matches the reference data. The inviscid solution predicts a deeper vortex suction, because without eddy viscosity there is nothing to damp the vortex.</p>
+
+          <figure class="figure narrow">
+            <img src="pictures/probe10_validation.png" alt="Nondimensional pressure at probe point 10: inviscid and viscous SU2 solutions compared with Nonomura et al." />
+            <figcaption>Figure 4. Pressure at probe point 10: inviscid and viscous SU2 solutions vs. Nonomura et al.</figcaption>
+          </figure>
 
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/W3qELA4IXSc" title="Pressure Environment Investigation After Solid Rocket Booster Ignition for a 2D Benchmark Case" allowfullscreen></iframe>
@@ -87,6 +105,11 @@
           <p>To move toward realistic launch pads, I modeled a 3D launch pad geometry from the literature: a four-nozzle vehicle above a deflector with a 60&deg; impingement section, a launch stand close to the rocket, and side walls that keep the flow within the pad. The fully structured volume mesh has nearly 15 million cells, and convergence was accelerated with multigrid on top of an adaptive CFL strategy.</p>
 
           <p>Pressure probes at the nozzle centerline, the base of the rocket, the deflector surface and beneath the launch stand trace how the IOP waves spread through the pad over time. A single inviscid run takes more than a week and its contour output for just 0.03&nbsp;s of flow reaches about 2&nbsp;TB, which is why 3D unsteady adjoint optimization is planned as future work.</p>
+
+          <figure class="figure narrow">
+            <img src="pictures/probe_D2_3d.png" alt="Nondimensional pressure history at probe D2 in the 3D launch pad" />
+            <figcaption>Figure 5. Pressure at probe D2, on the line through the four nozzle centers, which the IOP waves reach first: a sharp peak shortly after ignition, followed by decaying fluctuations.</figcaption>
+          </figure>
 
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/HyaGymjxPKY" title="Launch Environment Investigation of a 3D Solid Rocket Booster Benchmark Case" allowfullscreen></iframe>
@@ -120,6 +143,7 @@
       <div class="footer-links">
         <a href="mailto:ercan.danisan@metu.edu.tr" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/ercanumutdanışan/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=Jy3HYMwAAAAJ" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
       </div>
     </div>
   </footer>
