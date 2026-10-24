@@ -464,6 +464,8 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
   line-height: 1.5;
 }
 
+.figure.narrow img { max-width: 440px; margin: 0 auto; }
+
 .figure-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
 .figure-row .figure { margin: 0; }
 

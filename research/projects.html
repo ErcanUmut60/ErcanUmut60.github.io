@@ -46,19 +46,14 @@
           <h2 class="project-title">Hypersonic Research</h2>
           <p class="project-meta">2026 &ndash; Present &middot; METU, under supervision of Prof. Dr. Sinan Eyi</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>During re-entry, extreme temperatures dissociate and ionize the air around a vehicle, forming a plasma sheath that can block radio signals and cause communication blackout. Because ground tests cannot reproduce this environment, CFD is essential, and I am assessing how well open-source solvers capture these thermochemical nonequilibrium flows. Using the NASA RAM-C II flight experiment at Mach 23.9 and 61&nbsp;km altitude as a benchmark, I compared SU2-NEMO (with Mutation++) and <em>neqFoam</em> against ANSYS Fluent with a two-temperature model and 5-, 7- and 11-species air chemistry.</p>
 
-          <figure class="figure">
-            <img src="../style/banner.jpg" alt="Hypersonic flow field" />
-            <figcaption>Figure 1. Placeholder &mdash; replace with Mach contour or schlieren image.</figcaption>
+          <p>All three solvers predict comparable stagnation pressure and temperature, and both open-source codes resolve the hot, highly ionized post-shock layer, with peak temperatures around 26,000&nbsp;K and electron number densities near 1.5&times;10<sup>20</sup>&nbsp;m<sup>-3</sup>. Remaining differences in electron density point to chemistry, viscous transport and electron diffusion modeling as the next steps toward predicting communication blackout. This work was presented at the <a href="publications.html">27th AIAA Hypersonics Conference</a> in Naples.</p>
+
+          <figure class="figure narrow">
+            <img src="pictures/ramc2_temperature.png" alt="Translational-rotational temperature contour around the RAM-C II nose, SU2 above and neqFoam below" />
+            <figcaption>Figure 1. Translational&ndash;rotational temperature around the RAM-C II nose: SU2-NEMO (top) vs. <em>neqFoam</em> (bottom).</figcaption>
           </figure>
-
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
-          </div>
-          <p class="video-caption">Video 1. Placeholder &mdash; replace the YouTube embed URL with your simulation video.</p>
         </section>
 
         <!-- ========================= UNSTEADY ADJOINT ========================= -->
@@ -86,7 +81,7 @@
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/W3qELA4IXSc" title="Pressure Environment Investigation After Solid Rocket Booster Ignition for a 2D Benchmark Case" allowfullscreen></iframe>
           </div>
-          <p class="video-caption">Video 2. Pressure environment after solid rocket booster ignition for the 2D benchmark case.</p>
+          <p class="video-caption">Video 1. Pressure environment after solid rocket booster ignition for the 2D benchmark case.</p>
 
           <h3>3D Investigation</h3>
           <p>To move toward realistic launch pads, I modeled a 3D launch pad geometry from the literature: a four-nozzle vehicle above a deflector with a 60&deg; impingement section, a launch stand close to the rocket, and side walls that keep the flow within the pad. The fully structured volume mesh has nearly 15 million cells, and convergence was accelerated with multigrid on top of an adaptive CFL strategy.</p>
@@ -96,22 +91,15 @@
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/HyaGymjxPKY" title="Launch Environment Investigation of a 3D Solid Rocket Booster Benchmark Case" allowfullscreen></iframe>
           </div>
-          <p class="video-caption">Video 3. Launch environment investigation of a 3D solid rocket booster benchmark case.</p>
+          <p class="video-caption">Video 2. Launch environment investigation of a 3D solid rocket booster benchmark case.</p>
         </section>
 
         <!-- ========================= MILANO ========================= -->
         <section id="milano" class="project">
-          <h2 class="project-title">Re-entry Vehicle Aerodynamics</h2>
+          <h2 class="project-title">SU2-NEMO Validation for Supersonic &amp; Hypersonic Flows</h2>
           <p class="project-meta">Erasmus+ Research Internship &middot; Politecnico di Milano, Italy &middot; Sep 2022 &ndash; Jan 2023</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The research investigated aerodynamic characteristics of re-entry vehicles in hypersonic regimes using the SU2 CFD solver and its non-equilibrium extension SU2-NEMO.</p>
-
-          <figure class="figure">
-            <img src="../style/banner.jpg" alt="Re-entry capsule" />
-            <figcaption>Figure 2. Placeholder &mdash; re-entry capsule Mach contour.</figcaption>
-          </figure>
-
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>As an Erasmus+ intern at the Department of Aerospace Science and Technology (DAER) of Politecnico di Milano, under the supervision of Assoc. Prof. Luigi Vigevano, I worked on validating SU2-NEMO, the nonequilibrium extension of the open-source SU2 solver, for 2D and 3D supersonic and hypersonic flows. The work focused on the aerodynamic evaluation of re-entry vehicles, and it started my research on high-speed nonequilibrium flows that continues in my current hypersonic work at METU.</p>
         </section>
     </article>
 
