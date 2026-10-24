@@ -440,6 +440,10 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
   font-variant-numeric: tabular-nums;
 }
 
+.cite { white-space: nowrap; }
+
+.pub-list li:target { background: var(--accent-tint); }
+
 .pub-list .me { color: var(--ink); font-weight: 600; }
 
 .pub-compact li { padding-left: 0; }

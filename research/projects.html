@@ -61,7 +61,7 @@
           <h2 class="project-title">Unsteady Adjoint Optimization of a Flame Deflector</h2>
           <p class="project-meta">M.Sc. Thesis &middot; 2024 &ndash; 2026 &middot; METU</p>
 
-          <p>When a solid rocket booster ignites, it launches strong, transient Ignition Overpressure (IOP) waves into the launch environment. These waves reflect off the flame deflector and travel back toward the vehicle, where the high-amplitude loads can damage the structure and sensitive payloads. My thesis asks whether the deflector itself can be reshaped to weaken these reflected waves.</p>
+          <p>When a solid rocket booster ignites, it launches strong, transient Ignition Overpressure (IOP) waves into the launch environment. These waves reflect off the flame deflector and travel back toward the vehicle, where the high-amplitude loads can damage the structure and sensitive payloads. My thesis <a class="cite" href="#ref-1">[1]</a> asks whether the deflector itself can be reshaped to weaken these reflected waves.</p>
 
           <p>Because IOP and the starting vortex that follows it are inherently unsteady, the optimization has to be time-accurate. I used the unsteady discrete adjoint framework in the open-source SU2 solver to reshape a 45&deg; flat-plate deflector, with the deflector wall controlled by the points of a free-form deformation (FFD) box. The objective measures the pressure at a probe point over a window that covers both the IOP peak and the vortex suction. It penalizes overpressure fully and suction with a lower weight, so the larger suction does not dominate.</p>
 
@@ -87,13 +87,13 @@
           <p class="project-meta">TUBITAK 1001-ARDEB #123M355 &middot; 2024 &ndash; 2025</p>
 
           <h3>2D Investigation</h3>
-          <p>Before optimizing anything, the launch environment had to be simulated reliably. I used a benchmark from the literature: a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector. Time-accurate SU2 simulations ramp the inlet total pressure to mimic ignition. Right after ignition, the expanding plume compresses the air between the nozzle and the deflector into the IOP wave. A starting vortex then rolls up along the deflector and creates a suction region near the vehicle, and high-frequency acoustic waves eventually dominate the field.</p>
+          <p>Before optimizing anything, the launch environment had to be simulated reliably. I used a benchmark from the literature <a class="cite" href="#ref-2">[2]</a>, <a class="cite" href="#ref-3">[3]</a>: a booster with a 0.1&nbsp;m nozzle placed 0.5&nbsp;m above a 45&deg; flat-plate deflector. Time-accurate SU2 simulations ramp the inlet total pressure to mimic ignition. Right after ignition, the expanding plume compresses the air between the nozzle and the deflector into the IOP wave. A starting vortex then rolls up along the deflector and creates a suction region near the vehicle, and high-frequency acoustic waves eventually dominate the field.</p>
 
-          <p>Mesh and time-step studies showed that the main IOP and suction peaks are insensitive to grid resolution, while the later acoustic fluctuations are not. Inviscid (Euler) and viscous (RANS) solutions both agree well with published results in the IOP region. The inviscid model predicts a stronger suction peak, because it lacks viscous damping. Since the Euler simulations capture the main IOP&ndash;vortex structure at a fraction of the cost (about 30 minutes vs. 9 hours per run), they were used for the optimization.</p>
+          <p>Mesh and time-step studies <a class="cite" href="#ref-1">[1]</a> showed that the main IOP and suction peaks are insensitive to grid resolution, while the later acoustic fluctuations are not, as Housman et al. also observed <a class="cite" href="#ref-2">[2]</a>. Inviscid (Euler) and viscous (RANS) solutions both agree well with published results in the IOP region, including those of Nonomura et al. <a class="cite" href="#ref-3">[3]</a>. The inviscid model predicts a stronger suction peak, because it lacks viscous damping. Since the Euler simulations capture the main IOP&ndash;vortex structure at a fraction of the cost (about 30 minutes vs. 9 hours per run), they were used for the optimization.</p>
 
           <figure class="figure narrow">
             <img src="pictures/probe10_validation.png" alt="Nondimensional pressure at probe point 10: inviscid and viscous SU2 solutions compared with Nonomura et al." />
-            <figcaption>Figure 4. Pressure at probe point 10: inviscid and viscous SU2 solutions vs. Nonomura et al.</figcaption>
+            <figcaption>Figure 4. Pressure at probe point 10: inviscid and viscous SU2 solutions vs. Nonomura et al. <a class="cite" href="#ref-3">[3]</a>.</figcaption>
           </figure>
 
           <div class="video-embed">
@@ -102,7 +102,7 @@
           <p class="video-caption">Video 1. Pressure environment after solid rocket booster ignition for the 2D benchmark case.</p>
 
           <h3>3D Investigation</h3>
-          <p>To move toward realistic launch pads, I modeled a 3D launch pad geometry from the literature: a four-nozzle vehicle above a deflector with a 60&deg; impingement section, a launch stand close to the rocket, and side walls that keep the flow within the pad. The fully structured volume mesh has nearly 15 million cells, and convergence was accelerated with multigrid on top of an adaptive CFL strategy.</p>
+          <p>To move toward realistic launch pads <a class="cite" href="#ref-1">[1]</a>, I modeled a 3D launch pad geometry from the literature: a four-nozzle vehicle above a deflector with a 60&deg; impingement section, a launch stand close to the rocket, and side walls that keep the flow within the pad. The fully structured volume mesh has nearly 15 million cells, and convergence was accelerated with multigrid on top of an adaptive CFL strategy.</p>
 
           <p>Pressure probes at the nozzle centerline, the base of the rocket, the deflector surface and beneath the launch stand trace how the IOP waves spread through the pad over time. A single inviscid run takes more than a week and its contour output for just 0.03&nbsp;s of flow reaches about 2&nbsp;TB, which is why 3D unsteady adjoint optimization is planned as future work.</p>
 
@@ -124,6 +124,14 @@
 
           <p>As an Erasmus+ intern at the Department of Aerospace Science and Technology (DAER) of Politecnico di Milano, under the supervision of Assoc. Prof. Luigi Vigevano, I worked on validating SU2-NEMO, the nonequilibrium extension of the open-source SU2 solver, for 2D and 3D supersonic and hypersonic flows. The work focused on the aerodynamic evaluation of re-entry vehicles, and it started my research on high-speed nonequilibrium flows that continues in my current hypersonic work at METU.</p>
         </section>
+        <section id="references" class="project">
+          <h2 class="project-title">References</h2>
+          <ul class="pub-list">
+            <li id="ref-1"><span class="me">E. U. Danışan</span>, &ldquo;Unsteady adjoint-based optimization of flame deflectors to mitigate ignition overpressure,&rdquo; M.S. thesis, Dept. of Aerospace Engineering, Middle East Technical University, Ankara, Türkiye, Apr. 2026.</li>
+            <li id="ref-2">J. Housman, M. Barad, and C. Kiris, &ldquo;Space-time accuracy assessment of CFD simulations for the launch environment,&rdquo; in <em>29th AIAA Applied Aerodynamics Conference</em>, 2011, doi: <a href="https://doi.org/10.2514/6.2011-3650">10.2514/6.2011-3650</a>.</li>
+            <li id="ref-3">T. Nonomura, S. Tsutsumi, R. Takaki, E. Shima, and K. Fujii, &ldquo;Impact of temporal and spatial resolution on the aeroacoustic waves from a two-dimensional impinging jet,&rdquo; in <em>Proceedings of the Seventh International Conference on Computational Fluid Dynamics (ICCFD7)</em>, Big Island, Hawaii, 2012, paper ICCFD7-3103.</li>
+          </ul>
+        </section>
     </article>
 
     <aside class="toc">
@@ -133,6 +141,7 @@
           <li><a href="#adjoint">Unsteady Adjoint Optimization</a></li>
           <li><a href="#flame-deflector">Flame Deflector Investigation</a></li>
           <li><a href="#milano">Politecnico di Milano</a></li>
+          <li><a href="#references">References</a></li>
       </ul>
     </aside>
   </main>
