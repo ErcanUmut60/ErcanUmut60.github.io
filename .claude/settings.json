@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext * -)",
+      "Bash(pdfinfo *)",
+      "Bash(journalctl -b *)",
+      "Bash(ping -c*)",
+      "Bash(ip route)",
+      "Bash(ip -br addr *)"
+    ]
+  }
+}
