@@ -29,7 +29,9 @@
   function applyBanner() {
     var logo = document.getElementById('logo');
     if (logo) {
-      logo.style.backgroundImage = "url('" + prefix + "/style/banners/" + pick + "')";
+      // A page can pin a fixed image with data-banner="file.jpg"
+      var image = logo.getAttribute('data-banner') || pick;
+      logo.style.backgroundImage = "url('" + prefix + "/style/banners/" + image + "')";
       logo.style.backgroundSize = 'cover';
       logo.style.backgroundPosition = 'center center';
     }
