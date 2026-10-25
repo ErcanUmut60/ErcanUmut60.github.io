@@ -377,6 +377,20 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
   color: var(--muted);
 }
 
+/* ---------- Repertoire (song list grouped by artist) ---------- */
+
+.repertoire { columns: 3 200px; column-gap: 28px; margin-top: 12px; }
+.repertoire-group { break-inside: avoid; margin: 0 0 18px; }
+.repertoire-group h4 {
+  margin: 0 0 4px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.repertoire-group ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 0.95rem; }
+.repertoire-group li { margin: 0 0 2px; text-align: left; }
+
 /* ---------- Experience entries ---------- */
 
 .entry { padding: 20px 0; border-bottom: 1px solid var(--line); }
