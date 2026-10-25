@@ -380,6 +380,18 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
   color: var(--muted);
 }
 
+/* ---------- Place list (museums: original name + English name and city) ---------- */
+
+.place-list { list-style: none; margin: 0; padding: 0; }
+.place-list li {
+  padding: 10px 0 10px 14px;
+  border-left: 3px solid var(--accent-tint);
+  margin-bottom: 8px;
+  text-align: left;
+}
+.place-name { display: block; font-weight: 600; color: var(--ink); }
+.place-meta { display: block; font-size: 0.88rem; color: var(--muted); }
+
 /* ---------- Repertoire (song list grouped by artist) ---------- */
 
 .repertoire { columns: 3 200px; column-gap: 28px; margin-top: 12px; }
