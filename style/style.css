@@ -152,6 +152,9 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
 .hero .container,
 .page-hero .container { position: relative; }
 
+/* Home banner: zoom in and anchor left so the Merlin rocket sits right of the name */
+.hero[data-banner="Merlin-1-X4.jpg"] { background-size: 175% auto; background-position: 0 42%; }
+
 .hero { padding: 88px 0 80px; }
 .page-hero { padding: 48px 0 44px; }
 
@@ -538,6 +541,7 @@ p:empty, figcaption:empty, .project-meta:empty, .card-body p:empty { display: no
   .container { padding: 0 16px; }
   .panel { padding: 24px 20px; }
   .hero { padding: 56px 0 52px; }
+  .hero[data-banner="Merlin-1-X4.jpg"] { background-size: cover; background-position: 45% center; }
   .hero h1 { font-size: 2.1rem; }
   .page-hero { padding: 36px 0 32px; }
   h1 { font-size: 1.8rem; }
